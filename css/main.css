@@ -1,0 +1,96 @@
+@media {
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+
+    body {
+      font-family: Avenir, Helvetica Neue, Arial Black, sans;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+
+    h1 {
+      font-size: 300%;
+      font-weight: 400;
+      line-height: 120%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    h2 {
+      font-size: 120%;
+      font-weight: 400;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    
+    .logo-container img {
+      height: 12em;
+      margin-top: 3em;
+      margin-bottom: 1.6em;
+    }
+    
+    .contact-email:link {
+      display: flex;
+      margin: 2em auto;
+      width: 6em;
+      height: 6em;
+      line-height: 4em;
+      border-radius:50%;
+      color:#fff;
+      font-weight: 600;
+      letter-spacing: 0.38px;
+      align-items: center;
+      justify-content: center;
+      text-decoration:none;
+      background:#e84949;
+      -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
+      border: 1px dotted transparent;
+        
+    }
+
+   /* link for contact us email */
+    .contact-email:hover,
+    .contact-email:visited {
+      color:#333;
+      text-decoration:none;
+      background:#fff;
+      border: 1px dotted #f00;
+    }
+
+}
+
+
+
+@media (max-width: 360px){
+
+
+}
+
+@media (min-width: 361px){
+    
+    body {
+      font-size: 18px;
+    }
+
+    .contact-email:link {
+        line-height: 5.5em;
+    }
+    
+    
+
+}
