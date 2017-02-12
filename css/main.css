@@ -1,96 +1,338 @@
-@media {
-    html {
-      box-sizing: border-box;
-    }
-    *, *:before, *:after {
-      box-sizing: inherit;
-    }
+/*
+red color: rgba(231, 76, 60,1.0);
+red color: #e74c3c;
+*/
+
+/* ------------------------- */
+/* BASIC SETUP */
+/* ------------------------- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fff;
+  color: #444;
+  font-family: Avenir, Helvetica Neue, Arial Black, sans;
+  font-size: 15px;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+.col-1 {
+  background: honeydew
+  width: 10em
+  order: -1
+}
+
+.col-2 {
+  background: lightblue
+  flex-grow: 1
+}
 
 
-    body {
-      font-family: Avenir, Helvetica Neue, Arial Black, sans;
-      font-size: 16px;
-      font-weight: 500;
-    }
+/* ------------------------- */
+/* REUSABLE COMPONENTS */
+/* ------------------------- */
 
 
-    h1 {
-      font-size: 300%;
-      font-weight: 400;
-      line-height: 120%;
-      display: flex;
-      justify-content: center;
-    }
-    
-    h2 {
-      font-size: 120%;
-      font-weight: 400;
-      display: flex;
-      justify-content: center;
-    }
-    
-    .logo-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    
-    .logo-container img {
-      height: 12em;
-      margin-top: 3em;
-      margin-bottom: 1.6em;
-    }
-    
-    .contact-email:link {
-      display: flex;
-      margin: 2em auto;
-      width: 6em;
-      height: 6em;
-      line-height: 4em;
-      border-radius:50%;
-      color:#fff;
-      font-weight: 600;
-      letter-spacing: 0.38px;
-      align-items: center;
-      justify-content: center;
-      text-decoration:none;
-      background:#e84949;
-      -webkit-transition: all 1s ease-in-out;
-      -moz-transition: all 1s ease-in-out;
-      -o-transition: all 1s ease-in-out;
-      transition: all 1s ease-in-out;
-      border: 1px dotted transparent;
-        
-    }
+/* ----- HEADINGS ----- */
 
-   /* link for contact us email */
-    .contact-email:hover,
-    .contact-email:visited {
-      color:#333;
-      text-decoration:none;
-      background:#fff;
-      border: 1px dotted #f00;
-    }
+h1 {
+  font-size: 300%;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: .03em;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+}
 
+/*h1:before {
+  height: 2px;
+  display: block;
+  content: " ";
+  margin: 0 auto;
+  margin-top: .5em;
+  background-color: #444;
+  width: 50%;
+}*/
+
+h2 {
+  font-size: 120%;
+  font-weight: 400;
+  letter-spacing: .03em;
+  text-align: center;
+  margin-bottom: 2em;
+  text-rendering: optimizeLegibility;
+}
+
+h3 {
+  font-size: 130%;
+  font-weight: 400;
+  letter-spacing: .03em;
+  line-height: 1.1em;
+  text-rendering: optimizeLegibility;
+  /*text-align: center;*/
+  /*margin-bottom: 2em;*/
+}
+
+h4 {
+  font-size: 90%;
+  font-weight: 400;
+  letter-spacing: .03em;
+  line-height: 1.1em;
+  text-rendering: optimizeLegibility;
+  /*text-align: center;*/
+  /*margin-bottom: 2em;*/
 }
 
 
 
-@media (max-width: 360px){
+/* ----- PARAGRAPHS ----- */
 
+
+
+/* ----- HEART LOGO ----- */
+.rbpr-heart-logo {
+  background-image: url(../img/heart.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 10em;
+  margin: 2em 0;
+  /*background-color: pink;*/
+}
+
+
+/* ----- BUTTONS ----- */
+
+.contact-email:link {
+  display: flex;
+  margin: auto;
+  width: 6em;
+  height: 6em;
+  line-height: 4em;
+  border-radius:50%;
+  color:#fff;
+  font-weight: 600;
+  letter-spacing: 0.38px;
+  align-items: center;
+  justify-content: center;
+  text-decoration:none;
+  /*background: rgba(231, 76, 60,1.0);*/
+  background: #e74c3c;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  border: 1px dotted transparent;
+    
+}
+
+.contact-email:hover,
+.contact-email:visited {
+  color:#444;
+  text-decoration:none;
+  background:#fff;
+  border: 1px dotted #f00;
+}
+
+
+/* ----- LINKS ----- */
+
+a:link,
+a:visited {
+  /*padding: 8px 0px;*/
+  color: #444;
+  text-decoration: none;
+  /*font-size: 140%;*/
+  /*border-bottom: 2px solid transparent;*/
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+a:hover,
+a:active {
+  background-color: pink;
+  transition: background-color .2s;
+}
+
+
+/* ----- ICONS ----- */
+
+
+
+/* ------------------------- */
+/* HEADER */
+/* ------------------------- */
+
+
+
+
+header {
+  height: 3em;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+
+/* Sticky navigation */
+
+.fixed-header-nav {
+  display: flex;
+  height: 3em;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.rbpr-nav-name {
+  display: none;
+  width: 8em;
+  padding: .3em;
+  text-align: center;
+  /*margin: .5em 0 0 10.5em;*/
+  /*background-color: pink;*/
+  /*border: 1px solid #000;*/
+}
+
+.fixed-header-nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+/* 
+don't mess with this on the links
+as it gave me a better layout
+than using display: block; and with
+greater ease
+*/
+.fixed-header-nav ul li a {
+  display: flex;
+  justify-content: space-around;
+  width: 5em;
+  padding: 1em;
+  /*text-align: center;*/
+  /*border: 1px solid black;*/
 
 }
 
-@media (min-width: 361px){
-    
-    body {
-      font-size: 18px;
-    }
+/* ------------------------- */
+/* MAIN NAVIGATION */
+/* ------------------------- */
 
-    .contact-email:link {
-        line-height: 5.5em;
-    }
-    
-    
+/* Main navigation */
 
+.main-nav-container {
+  /*height: 100vh;*/
+  display: flex;
+  flex-flow: wrap row;
+  list-style: none;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.main-nav-container a {
+  width: 10em;
+  padding: 2em;
+}
+/*.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}*/
+
+.main-nav-services {
+  /*padding: 1em;*/
+  border-right: 2px solid #444;
+  border-bottom: 2px solid #444;
+}
+
+.main-nav-press {
+  /*padding: 1em;*/
+  border-bottom: 2px solid #444;
+}
+
+.main-nav-approach {
+  /*padding: 1em;*/
+  border-right: 2px solid #444;
+}
+
+.main-nav-contact {
+  /*padding: 1em;*/
+}
+
+
+
+/* ------------------------- */
+/* SERVICES */
+/* ------------------------- */
+
+.services-section {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  text-align: center;
+}
+
+.services-section li {
+  padding: 3em;
+}
+
+.services-section li a {
+  /*padding: 2em;*/
+}
+
+.services-section li:first-of-type {
+  margin-top: 4em;
+  padding: 2em 2em 2px 2em;
+  border-bottom: 2px solid #444;  
+}
+
+.services-section li:last-of-type {
+  margin-bottom: 4em;
+  border-bottom: 2px solid #444; 
+}
+
+
+
+/* ------------------------- */
+/* PRESS */
+/* ------------------------- */
+
+.press-section {
+  display: flex;
+  flex-flow: wrap column;
+}
+
+/* ------------------------- */
+/* APPROACH / PHILOSOPHY */
+/* ------------------------- */
+
+/* ------------------------- */
+/* CONTACT FORM */
+/* ------------------------- */
+
+/* ------------------------- */
+/* FOOTER */
+/* ------------------------- */
+
+
+/* ------------------------- */
+/* Animations */
+/* ------------------------- */
+
+
+
+/* ----- A nice gradient called Kyoto from uigradients.com ----- */
+
+.a-nice-gradient {
+  background: #c21500; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #c21500 , #ffc500); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #c21500 , #ffc500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
