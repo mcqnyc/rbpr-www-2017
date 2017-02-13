@@ -171,9 +171,6 @@ a:active {
 /* HEADER */
 /* ------------------------- */
 
-
-
-
 header {
   height: 3em;
 }
@@ -185,6 +182,7 @@ header {
   position: fixed;
   display: flex;
   height: 3em;
+  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
@@ -215,8 +213,8 @@ header {
 /* 
 don't mess with this on the links
 as it gave me a better layout
-than using display: block; and with
-greater ease
+than using display: block; (and with
+greater ease)
 */
 .sticky-header-nav ul li a {
   display: flex;
@@ -242,7 +240,6 @@ greater ease
   justify-content: center;
   text-align: center;
 }
-
 
 .main-nav-container a {
   width: 10em;

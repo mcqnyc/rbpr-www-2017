@@ -10,13 +10,13 @@
     <title>red branch public relations</title>
   </head>
 
-    <body>
+    <body id="top-of-page">
 
         <header>
             <nav class="sticky-header-nav">
             <!-- <nav class="header"> -->
             <!-- <nav> -->
-                <a href="#">
+                <a href="#top-of-page">
                     <div class="rbpr-nav-name">
                         <!-- red branch<br>
                         public relations -->
@@ -25,10 +25,10 @@
                     </div>
                 </a>
                 <ul>
-                    <li><a href="#">services</a></li>
-                    <li><a href="#">press</a></li>    
-                    <li><a href="#">approach</a></li>    
-                    <li><a href="#">contact</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#press">press</a></li>    
+                    <li><a href="#approach">approach</a></li>    
+                    <li><a href="#contact">contact</a></li>
                 </ul>
             </nav>
 
@@ -47,19 +47,30 @@
 
     
 
-        <div class="main-nav-container">
+        <nav class="main-nav-container">
 
-            <a href="#" class="main-nav-services">services</a>
-            <a href="#" class="main-nav-press">press</a>
-            <a href="#" class="main-nav-approach">approach</a>
-            <a href="#" class="main-nav-contact">contact</a>
+            <a href="#services" class="main-nav-services">services</a>
+            <a href="#press" class="main-nav-press">press</a>
+            <a href="#approach" class="main-nav-approach">approach</a>
+            <a href="#contact" class="main-nav-contact">contact</a>
     <!-- 
             <a href="#" class="services"><li>services</li></a>
             <a href="#" class="press"><li>press</li></a>
             <a href="#" class="approach"><li>approach</li></a>
             <a href="#" class="contact"><li>contact</li></a> 
     -->     
-        </div>
+        </nav>
+
+        <section id="services" class="services-section js--services-section">
+        
+            <ul>
+                <li>SERVICES</li>
+                <li><a href="#">public relations</a></li>
+                <li><a href="#">content creation</a></li>
+                <li><a href="#">social media</a></li>
+                <li><a href="#">pr training</a></li>
+            </ul>
+        </section>
 
 
         <section class="services-section">
@@ -73,32 +84,24 @@
             </ul>
         </section>
 
-        <section class="services-section js--services-section">
         
-            <ul>
-                <li>SERVICES</li>
-                <li><a href="#">public relations</a></li>
-                <li><a href="#">content creation</a></li>
-                <li><a href="#">social media</a></li>
-                <li><a href="#">pr training</a></li>
-            </ul>
-        </section>
 
-        <section class="press-section">
+        <section id="press" class="press-section">
             
         </section>
 
-        <section class="approach-section">
+        <section id="approach" class="approach-section">
             
         </section>
         
-        <section class="contact-section">
+        <section id="contact" class="contact-section">
             
         </section>
                
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>     
+    <script src="js/script.js"></script>     
     
     </body>
 
