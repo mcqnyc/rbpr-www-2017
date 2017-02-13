@@ -176,17 +176,23 @@ a:active {
 
 header {
   height: 3em;
-  border-bottom: 1px solid #e7e7e7;
 }
-
 
 /* Sticky navigation */
 
-.fixed-header-nav {
+
+.sticky-header-nav {
+  position: fixed;
   display: flex;
   height: 3em;
-  margin: 0 auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 3px 2px #efefef;
+  z-index: 9999;
 }
 
 .rbpr-nav-name {
@@ -199,7 +205,7 @@ header {
   /*border: 1px solid #000;*/
 }
 
-.fixed-header-nav ul {
+.sticky-header-nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -212,7 +218,7 @@ as it gave me a better layout
 than using display: block; and with
 greater ease
 */
-.fixed-header-nav ul li a {
+.sticky-header-nav ul li a {
   display: flex;
   justify-content: space-around;
   width: 5em;
