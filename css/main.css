@@ -99,7 +99,7 @@ h4 {
 
 /* ----- HEART LOGO ----- */
 .rbpr-heart-logo {
-  background-image: url(../img/heart.svg);
+  background-image: url("../img/heart.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -280,27 +280,83 @@ greater ease)
   display: flex;
   flex-flow: wrap column;
   align-items: center;
-  text-align: center;
+  padding: 2em;
+  margin: 4em 0;
+  background-image: url("../img/leather-nunchuck.png");
+  background-repeat: cover;
+}
+
+.services-section h1 {
+  background-color: #fff9f4;
+  width: 0 auto;
+  padding: 0 1em;
+  border: 1px solid #e7e7e7;
+  /*width: 80%;*/
+  /*text-align: center; */
+  /*color: #fff9f4;*/
+}
+.services-section ul {
+  list-style: circle outside;
+  margin-left: 0;
+  padding-left: 1em;
 }
 
 .services-section li {
-  padding: 3em;
+  padding: .5em 0;
 }
 
-.services-section li a {
-  /*padding: 2em;*/
+/* Style the buttons that are used to open and close the accordion panel */
+button.services-accordion {
+  background-color: #fffff4;
+  font-size: 1em;
+  color: #444;
+  cursor: pointer;
+  padding: 1em;
+  padding-top: 1.3em;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-bottom: 1px solid #e7e7e7;
 }
 
-.services-section li:first-of-type {
-  margin-top: 4em;
-  padding: 2em 2em 2px 2em;
-  border-bottom: 2px solid #444;  
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.services-accordion.active,
+button.services-accordion:hover {
+  background-color: #fff9f4;
 }
 
-.services-section li:last-of-type {
-  margin-bottom: 4em;
-  border-bottom: 2px solid #444; 
+/* Add a symbol to each button to indicate whether the collapsible content is open or closed */
+button.services-accordion:after {
+    content: "\02795"; /* Unicode character for "plus" sign (+) */
+    font-size: 1em;
+    color: #777;
+    float: right;
+    margin-left: .5em;
 }
+
+button.services-accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 1em;
+    background-color: rgba(255, 249, 244, 0.93);
+    max-height: 0;
+    width: 80%;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/*div.panel:nth-child(8) {
+  border-bottom: 1px solid transparent;
+}
+*/
+
 
 
 

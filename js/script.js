@@ -8,7 +8,7 @@ $(document).ready(function(){
           $('.sticky-header-nav').css('opacity', 0)
       }
     }, {
-      offset: '3em'
+      offset: '35em'
     });
     
     
@@ -29,6 +29,23 @@ $(document).ready(function(){
       });
     });
     
+    /* Animated Accordion (Slide Down) */
+//  Fix this to remove global const
+    const acc = document.getElementsByClassName("services-accordion");
+
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      }
+    }
+
+
     /* Animate on scroll */
     $('.js--fade-in').waypoint(function(direction){
         $('.js--fade-in').addClass('animated fadeIn');
