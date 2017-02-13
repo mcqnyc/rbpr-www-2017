@@ -78,7 +78,7 @@ and reorganize the nav bar
     display: block;
   }
 
-  .fixed-header-nav {
+  .sticky-header-nav {
     justify-content: space-between;
   }
     

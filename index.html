@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Red Branch Public Relations is a boutique public relations company based in New York City.">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/queries.css">
@@ -12,7 +13,9 @@
     <body>
 
         <header>
-            <div class="fixed-header-nav">
+            <nav class="sticky-header-nav">
+            <!-- <nav class="header"> -->
+            <!-- <nav> -->
                 <a href="#">
                     <div class="rbpr-nav-name">
                         <!-- red branch<br>
@@ -27,7 +30,7 @@
                     <li><a href="#">approach</a></li>    
                     <li><a href="#">contact</a></li>
                 </ul>
-            </div>
+            </nav>
 
         </header>
 
@@ -44,7 +47,7 @@
 
     
 
-        <nav class="main-nav-container">
+        <div class="main-nav-container">
 
             <a href="#" class="main-nav-services">services</a>
             <a href="#" class="main-nav-press">press</a>
@@ -56,10 +59,22 @@
             <a href="#" class="approach"><li>approach</li></a>
             <a href="#" class="contact"><li>contact</li></a> 
     -->     
-        </nav>
+        </div>
 
 
         <section class="services-section">
+        
+            <ul>
+                <li>SERVICES</li>
+                <li><a href="#">public relations</a></li>
+                <li><a href="#">content creation</a></li>
+                <li><a href="#">social media</a></li>
+                <li><a href="#">pr training</a></li>
+            </ul>
+        </section>
+
+        <section class="services-section js--services-section">
+        
             <ul>
                 <li>SERVICES</li>
                 <li><a href="#">public relations</a></li>
@@ -80,7 +95,11 @@
         <section class="contact-section">
             
         </section>
-                
+               
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>     
+    
     </body>
 
 </html>
