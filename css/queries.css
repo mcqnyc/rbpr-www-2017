@@ -1,0 +1,90 @@
+/* Mobile screens */
+
+@media (max-width: 320px){
+
+
+}
+
+
+
+
+/* Media above mobile screen-sized */
+
+@media (min-width: 321px){
+    
+  body {
+    font-size: 16px;
+  }
+
+  .contact-email:link {
+      line-height: 5.5em;
+  }
+    
+
+
+}
+
+
+/* 
+Break point for the links in the 
+main nav container to go from 
+stacked on each other to a row
+*/
+
+@media (min-width: 448px){
+
+  .main-nav-container a {
+    width: 6em;
+    padding: 1em;
+  }
+  /*.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+  }*/
+
+  .main-nav-services {
+    /*padding: 1em;*/
+    border-right: 2px solid #444;
+    border-bottom: 2px solid transparent;
+  }
+
+  .main-nav-press {
+    /*padding: 1em;*/
+    border-right: 2px solid #444;
+    border-bottom: 2px solid transparent;
+  }
+
+  .main-nav-approach {
+    /*padding: 1em;*/
+    border-right: 2px solid #444;
+  }
+
+}
+
+/* 
+Break point for the RBPR logo
+link in the top left to appear
+and reorganize the nav bar
+*/
+
+
+@media (min-width: 500px){
+    
+  body {
+    font-size: 17px;
+  }
+
+  .rbpr-nav-name {
+    display: block;
+  }
+
+  .fixed-header-nav {
+    justify-content: space-between;
+  }
+    
+
+}
+
+
+
+
