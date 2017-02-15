@@ -8,7 +8,7 @@ $(document).ready(function(){
           $('.sticky-header-nav').css('opacity', 0)
       }
     }, {
-      offset: '35em'
+      offset: '68em'
     });
     
     
@@ -30,13 +30,15 @@ $(document).ready(function(){
     });
     
     /* Animated Accordion (Slide Down) */
-//  Fix this to remove global const
-    const acc = document.getElementsByClassName("services-accordion");
 
-    for (let i = 0; i < acc.length; i++) {
-      acc[i].onclick = function() {
+//  Fix this to remove global const; Also - transpile it
+    const accordions = document.getElementsByClassName("services-accordion");
+
+    for (let i = 0; i < accordions.length; i++) {
+      accordions[i].onclick = function() {
         this.classList.toggle("active");
-        var panel = this.nextElementSibling;
+
+        let panel = this.nextElementSibling;
         if (panel.style.maxHeight){
           panel.style.maxHeight = null;
         } else {
@@ -44,6 +46,35 @@ $(document).ready(function(){
         } 
       }
     }
+
+    /* Animated slide on Approach section */ 
+
+    function myFunction() {
+      const x = document.getElementById("approach-section");
+      // const x = document.getElementById("approach-toggle-content");
+      // var x = document.getElementById('myDIV');
+      // if (x.style.display === 'none') {
+      //     x.style.display = 'block';
+      // } else {
+      //     x.style.display = 'none';
+      // }
+      if (x.style.overflow === 'hidden') {
+          x.style.overflow = 'visible';
+      } else {
+          x.style.overflow = 'hidden';
+      }
+    }
+/*
+  put a + button on top, greyed out background:
+  on click toggle the css property to be active 
+  so it does what is indicated there
+
+    if overflow: hidden; is true
+    change it to the setting that shows all the text
+    
+    also, change the button to be a "-" and remove 
+    the greyed out background
+*/
 
 
     /* Animate on scroll */

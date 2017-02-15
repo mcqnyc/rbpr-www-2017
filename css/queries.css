@@ -93,9 +93,37 @@ appear under services-accordion
 
 @media (min-width: 730px){
 
+  button.services-accordion {
+    width: 70%;
+  }
+
   div.panel {
-      width: 70%;
+      width: 55%;
   }
 }
 
+
+@media (min-width: 850px){
+
+  button.services-accordion {
+    width: 70%;
+  }
+
+
+  div.panel {
+      width: 55%;
+  }
+}
+
+@media (min-width: 1000px){
+
+  button.services-accordion {
+    width: 65%;
+  }
+
+
+  div.panel {
+      width: 50%;
+  }
+}
 
