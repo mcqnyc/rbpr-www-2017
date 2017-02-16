@@ -86,6 +86,15 @@ h4 {
 
 
 
+/* ----- POSITIONERS ----- */
+
+.positioner {
+  max-width: 96%;
+  margin: 0 auto;
+  /*background-color: blue;*/
+  /*border: 1px solid black;*/
+}
+
 /* ----- PARAGRAPHS ----- */
 
 
@@ -354,29 +363,58 @@ div.panel {
 /* PRESS */
 /* ------------------------- */
 
+.press-section {
+  width: 100%;
+  padding-bottom: 3em;
+  /*background-color: rgba(255, 178, 0, 0.25);*/
+  /*background-color: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), rgba(255, 178, 0, 0.98);*/
+  /*background-color: #FFB200;*/
+  /*border: 2px solid black;*/
+}
+
 
 .press-section h1 {
   background-color: #fff9f4;
-  margin: 1em 0 .5em 0;
+  margin: 1em 0 0 0;
   width: auto;
-  padding: .5em;
+  padding: .25em;
   border: 1px solid #e7e7e7;
 }
 
 .press-hit-container {
   display: flex;
-  flex-flow: wrap column;
-
-  border: 2px solid #000;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /*border: 2px solid #000;*/
 }
 
-    /*    <section id="press" class="press-section">
-            <h1>press</h1>
-            <ul class="press-hit-container">
-                <li>
-                    <figure class="press-hit">
-                        <img src="" alt="">
-                    </figure>*/
+.press-hit-container li {
+  height: 8em;
+  width: 6em;
+  flex-grow: 1;
+  border: 1px solid #a9a9a9;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.press-hit {
+  width: 100%;
+  margin: 0;
+}
+
+.press-hit img {
+  opacity: 0.75;
+  width: 100%;
+  height: auto;
+  transform: scale(1.05);
+  /*transition: transform 0.1s, opacity 0.1s;*/
+}
+
+.press-hit img:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
 
 
 /* ------------------------- */
