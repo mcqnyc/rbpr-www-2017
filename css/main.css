@@ -91,8 +91,6 @@ h4 {
 .positioner {
   max-width: 96%;
   margin: 0 auto;
-  /*background-color: blue;*/
-  /*border: 1px solid black;*/
 }
 
 /* ----- PARAGRAPHS ----- */
@@ -239,7 +237,6 @@ greater ease)
 /* Main navigation */
 
 .main-nav-container {
-  /*height: 100vh;*/
   display: flex;
   flex-flow: wrap row;
   list-style: none;
@@ -252,29 +249,18 @@ greater ease)
   width: 10em;
   padding: 2em;
 }
-/*.main-nav li {
-  display: inline-block;
-  margin-left: 40px;
-}*/
 
 .main-nav-services {
-  /*padding: 1em;*/
   border-right: 2px solid #444;
   border-bottom: 2px solid #444;
 }
 
 .main-nav-press {
-  /*padding: 1em;*/
   border-bottom: 2px solid #444;
 }
 
-.main-nav-approach {
-  /*padding: 1em;*/
+.main-nav-philosophy {
   border-right: 2px solid #444;
-}
-
-.main-nav-contact {
-  /*padding: 1em;*/
 }
 
 
@@ -284,12 +270,16 @@ greater ease)
 /* ------------------------- */
 
 .services-section {
+  min-height: 100vh;
   display: flex;
   flex-flow: wrap column;
   align-items: center;
+  justify-content: center;
   padding: 2em 0;
+  margin-bottom: 0;
   background-image: url("../img/leather-nunchuck.png");
   background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 .services-section h1 {
@@ -365,8 +355,13 @@ div.panel {
 
 .press-section {
   width: 100%;
-  padding-bottom: 3em;
-  /*background-color: rgba(255, 178, 0, 0.25);*/
+  min-height: 100vh;
+  padding-top: 1em;
+  padding-bottom: 4em;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: rgba(255, 178, 0, 0.8);
+  background-image: url("../img/dark-mosaic.png");
   /*background-color: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), rgba(255, 178, 0, 0.98);*/
   /*background-color: #FFB200;*/
   /*border: 2px solid black;*/
@@ -418,12 +413,13 @@ div.panel {
 
 
 /* ------------------------- */
-/* APPROACH / PHILOSOPHY */
+/* philosophy / PHILOSOPHY */
 /* ------------------------- */
 
-.approach-section {
-  width: 90%;
-  height: 25em;
+.philosophy-section {
+  width: 100%;
+  height: 100vh;
+  /*height: 25em;*/
   overflow: hidden;
   margin: 0 auto;
   padding-bottom: 2em;
@@ -434,19 +430,19 @@ div.panel {
   /*background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("../img/congruent_pentagon.png");*/
 }
 
-.approach-section:before {
+.philosophy-section:before {
   
 }
 
-.approach-section h1 {
+.philosophy-section h1 {
   background-color: #fff9f4;
-  margin: 1em 0 .5em 0;
+  margin: 1.25em 0 .5em 0;
   width: auto;
-  padding: .5em;
+  padding: .25em 0;
   border: 1px solid #e7e7e7;
 }
 
-.approach-section p {
+.philosophy-section p {
   padding: 0 2.5em;
   line-height: 150%;
   font-size: 110%;
@@ -457,8 +453,76 @@ div.panel {
 
 
 /* ------------------------- */
-/* CONTACT FORM */
+/* CONTACT SECTION */
 /* ------------------------- */
+
+.contact-section {
+    width: 100%;
+    /*height: 500px;*/
+    height: 100vh;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(231, 76, 60, 0.9), rgba(231, 76, 60, 0.8)), url("../img/magazines.jpg");
+    /*background-image: linear-gradient(rgba(231, 76, 60, 0.9), rgba(255, 255, 255, 0.98)), url("../img/magazines.jpg");*/
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("../img/magazines.jpg");*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+
+/*.contact-section h1 {*/
+.contact-section h2 {
+  font-size: 300%;
+  font-weight: 300;
+  color: #fff;
+  padding: 1em 0;
+  margin-bottom: 0;
+}
+
+.social-icons-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.social-icons-container ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  /*justify-content: space-between;*/
+  border: 2px solid #fff;
+  border-radius: 5px;
+  width: 80%;
+  height: 100%;
+}
+
+.social-icons-container li {
+  margin: .75em;
+  height: 2.5em;
+  width: 2.5em;
+  /*border: 2px solid yellow;*/
+}
+
+
+
+/* Social media links 
+
+.contact-section a:link,
+.contact-section a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* there is no hover on mobile so
+ move this to a higher media query */
+.contact-section a:hover,
+.contact-section a:active {
+  background-color: transparent;
+  border-bottom: 2px solid #fff;
+}
 
 /* ------------------------- */
 /* FOOTER */

@@ -47,11 +47,11 @@ $(document).ready(function(){
       }
     }
 
-    /* Animated slide on Approach section */ 
+    /* Animated slide on philosophy section */ 
 
     function myFunction() {
-      const x = document.getElementById("approach-section");
-      // const x = document.getElementById("approach-toggle-content");
+      const x = document.getElementById("philosophy-section");
+      // const x = document.getElementById("philosophy-toggle-content");
       // var x = document.getElementById('myDIV');
       // if (x.style.display === 'none') {
       //     x.style.display = 'block';
