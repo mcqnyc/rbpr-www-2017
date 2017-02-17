@@ -24,15 +24,8 @@ body {
   overflow-x: hidden;
 }
 
-.col-1 {
-  background: honeydew
-  width: 10em
-  order: -1
-}
-
-.col-2 {
-  background: lightblue
-  flex-grow: 1
+section {
+  margin: 2em 0;
 }
 
 
@@ -47,7 +40,7 @@ h1 {
   font-size: 300%;
   font-weight: 400;
   line-height: 120%;
-  letter-spacing: .03em;
+  letter-spacing: 2px;
   text-align: center;
   text-rendering: optimizeLegibility;
 }
@@ -65,7 +58,7 @@ h1 {
 h2 {
   font-size: 120%;
   font-weight: 400;
-  letter-spacing: .03em;
+  letter-spacing: 1px;
   text-align: center;
   margin-bottom: 2em;
   text-rendering: optimizeLegibility;
@@ -74,7 +67,7 @@ h2 {
 h3 {
   font-size: 130%;
   font-weight: 400;
-  letter-spacing: .03em;
+  letter-spacing: 1px;
   line-height: 1.1em;
   text-rendering: optimizeLegibility;
   /*text-align: center;*/
@@ -84,7 +77,7 @@ h3 {
 h4 {
   font-size: 90%;
   font-weight: 400;
-  letter-spacing: .03em;
+  letter-spacing: 1px;
   line-height: 1.1em;
   text-rendering: optimizeLegibility;
   /*text-align: center;*/
@@ -93,13 +86,20 @@ h4 {
 
 
 
+/* ----- POSITIONERS ----- */
+
+.positioner {
+  max-width: 96%;
+  margin: 0 auto;
+}
+
 /* ----- PARAGRAPHS ----- */
 
 
 
 /* ----- HEART LOGO ----- */
 .rbpr-heart-logo {
-  background-image: url(../img/heart.svg);
+  background-image: url("../img/heart.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -120,7 +120,7 @@ h4 {
   border-radius:50%;
   color:#fff;
   font-weight: 600;
-  letter-spacing: 0.38px;
+  letter-spacing: 1px;
   align-items: center;
   justify-content: center;
   text-decoration:none;
@@ -171,11 +171,12 @@ a:active {
 /* HEADER */
 /* ------------------------- */
 
-
-
-
 header {
-  height: 3em;
+  /*margin: 5em 0;*/
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Sticky navigation */
@@ -185,6 +186,7 @@ header {
   position: fixed;
   display: flex;
   height: 3em;
+  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
@@ -215,13 +217,13 @@ header {
 /* 
 don't mess with this on the links
 as it gave me a better layout
-than using display: block; and with
-greater ease
+than using display: block; (and with
+greater ease)
 */
 .sticky-header-nav ul li a {
   display: flex;
   justify-content: space-around;
-  width: 5em;
+  width: 5.25em;
   padding: 1em;
   /*text-align: center;*/
   /*border: 1px solid black;*/
@@ -235,42 +237,31 @@ greater ease
 /* Main navigation */
 
 .main-nav-container {
-  /*height: 100vh;*/
   display: flex;
   flex-flow: wrap row;
   list-style: none;
   justify-content: center;
+  align-items: center;
   text-align: center;
+  margin: 2em 0 5em 0;
 }
-
 
 .main-nav-container a {
   width: 10em;
   padding: 2em;
 }
-/*.main-nav li {
-  display: inline-block;
-  margin-left: 40px;
-}*/
 
 .main-nav-services {
-  /*padding: 1em;*/
   border-right: 2px solid #444;
   border-bottom: 2px solid #444;
 }
 
 .main-nav-press {
-  /*padding: 1em;*/
   border-bottom: 2px solid #444;
 }
 
-.main-nav-approach {
-  /*padding: 1em;*/
+.main-nav-philosophy {
   border-right: 2px solid #444;
-}
-
-.main-nav-contact {
-  /*padding: 1em;*/
 }
 
 
@@ -280,29 +271,81 @@ greater ease
 /* ------------------------- */
 
 .services-section {
+  min-height: 100vh;
   display: flex;
   flex-flow: wrap column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  padding: 2em 0;
+  margin-bottom: 0;
+  background-image: url("../img/leather-nunchuck.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.services-section h1 {
+  background-color: #fff9f4;
+  padding: 0 1em;
+  border: 1px solid #e7e7e7;
+}
+
+.services-section ul {
+  list-style: circle outside;
+  margin-left: 0;
+  padding-left: 1em;
 }
 
 .services-section li {
-  padding: 3em;
+  padding: .5em 0;
 }
 
-.services-section li a {
-  /*padding: 2em;*/
+/* Style the buttons that are used to open and close the accordion panel */
+button.services-accordion {
+  background-color: #fffff4;
+  font-size: 100%;
+  color: #444;
+  cursor: pointer;
+  padding: 1em;
+  padding-top: 1.3em;
+  width: 80%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-bottom: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
 }
 
-.services-section li:first-of-type {
-  margin-top: 4em;
-  padding: 2em 2em 2px 2em;
-  border-bottom: 2px solid #444;  
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.services-accordion.active,
+button.services-accordion:hover {
+  background-color: #fff9f4;
 }
 
-.services-section li:last-of-type {
-  margin-bottom: 4em;
-  border-bottom: 2px solid #444; 
+/* Add a symbol to each button to indicate whether the collapsible content is open or closed */
+button.services-accordion:after {
+    content: "\02795"; /* Unicode character for "plus" sign (+) */
+    font-size: 1em;
+    color: #777;
+    float: right;
+    margin-left: .5em;
+}
+
+button.services-accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 1em;
+    background-color: rgba(255, 249, 244, 0.93);
+    max-height: 0;
+    width: 65%;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 
@@ -312,17 +355,184 @@ greater ease
 /* ------------------------- */
 
 .press-section {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 1em;
+  padding-bottom: 4em;
   display: flex;
-  flex-flow: wrap column;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: rgba(255, 178, 0, 1.0);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.67), rgba(255, 255, 255, 0.67)), url("../img/dark-mosaic.png");
+  /*background-image: linear-gradient(rgba(255, 255, 255, 0.67), rgba(255, 255, 255, 0.87)), url("../img/basketball.png");*/
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.87)), url("../img/basketball.png");*/
+  /*background-image: url("../img/dark-mosaic.png");*/
 }
 
-/* ------------------------- */
-/* APPROACH / PHILOSOPHY */
-/* ------------------------- */
+
+.press-section h1 {
+  background-color: #fff9f4;
+  margin: 1em 0 0 0;
+  width: auto;
+  padding: .25em;
+  border: 1px solid #e7e7e7;
+}
+
+.press-hit-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /*border: 2px solid #000;*/
+}
+
+.press-hit-container li {
+  height: 8em;
+  width: 6em;
+  flex-grow: 1;
+  border: 1px solid #a9a9a9;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.press-hit {
+  width: 100%;
+  margin: 0;
+}
+
+.press-hit img {
+  opacity: 0.75;
+  width: 100%;
+  height: auto;
+  transform: scale(1.05);
+  /*transition: transform 0.1s, opacity 0.1s;*/
+}
+
+.press-hit img:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
 
 /* ------------------------- */
-/* CONTACT FORM */
+/* philosophy / PHILOSOPHY */
 /* ------------------------- */
+
+.philosophy-section {
+  width: 100%;
+  min-height: 100vh;
+  /*height: 100vh;*/
+  /*height: 25em;*/
+  overflow: hidden; 
+  margin: 0 auto;
+  padding-bottom: 2em;
+  background-image: url("../img/bright-squares.png");
+  background-color: rgba(41, 128, 185, 0.98);
+  /*background-color: #2980b9;*/
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("../img/congruent_pentagon.png");*/
+}
+
+.philosophy-section:before {
+  
+}
+
+
+#philosophy-toggle-content-button {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #fff;
+}
+
+.philosophy-section h1 {
+  background-color: #fff9f4;
+  margin: 1.25em 0 .5em 0;
+  width: auto;
+  padding: .25em 0;
+  border: 1px solid #e7e7e7;
+}
+
+.philosophy-section p {
+  padding: 0 2.5em;
+  line-height: 150%;
+  font-size: 110%;
+  font-weight: 200;
+  text-align: justify-all;
+  color: #e9e9e9;
+}
+
+
+/* ------------------------- */
+/* CONTACT SECTION */
+/* ------------------------- */
+
+.contact-section {
+    width: 100%;
+    /*height: 500px;*/
+    height: 100vh;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(231, 76, 60, 0.9), rgba(231, 76, 60, 0.8)), url("../img/magazines.jpg");
+    /*background-image: linear-gradient(rgba(231, 76, 60, 0.9), rgba(255, 255, 255, 0.98)), url("../img/magazines.jpg");*/
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("../img/magazines.jpg");*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+
+/*.contact-section h1 {*/
+.contact-section h2 {
+  font-size: 300%;
+  font-weight: 300;
+  color: #fff;
+  padding: 1em 0;
+  margin-bottom: 0;
+}
+
+.social-icons-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  min-width: 288px;
+  margin: 0 auto;
+}
+
+.social-icons-container ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  width: 80%;
+  height: 100%;
+}
+
+.social-icons-container li {
+  margin: .75em;
+  height: 2em;
+  width: 2em;
+}
+
+
+
+/* Social media links 
+
+.contact-section a:link,
+.contact-section a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* there is no hover on mobile so
+ move this to a higher media query */
+.contact-section a:hover,
+.contact-section a:active {
+  background-color: transparent;
+  border-bottom: 2px solid #fff;
+}
 
 /* ------------------------- */
 /* FOOTER */
