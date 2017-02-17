@@ -1,4 +1,6 @@
+/* ------------------------- */
 /* Mobile screens */
+/* ------------------------- */
 
 @media (max-width: 320px){
 
@@ -7,10 +9,12 @@
 
 
 
-
+/* ------------------------- */
 /* Media above mobile screen-sized */
+/* ------------------------- */
 
-@media (min-width: 321px){
+
+@media (min-width: 340px){
     
   body {
     font-size: 16px;
@@ -19,7 +23,11 @@
   .contact-email:link {
       line-height: 5.5em;
   }
-    
+  
+  .contact-section > .positioner {
+    max-width: 90%;
+    margin: 0 auto;
+  }
 
 
 }
@@ -27,11 +35,37 @@
 
 /* Break point to format press hit section */
 
-@media (min-width: 385px){
+@media (min-width: 380px){
   .positioner {
     max-width: 85%;
     margin: 0 auto;
   }
+
+  #philosophy-toggle-content {
+    text-align: justify;
+  }
+
+  .contact-section > .positioner {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+/*
+  .social-icons-container ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  width: 80%;
+  height: 100%;
+}
+
+ .social-icons-container li {
+    margin: .5em;
+    height: 2em;
+    width: 2em;
+  }*/
 }
 
 /* 
@@ -40,10 +74,14 @@ main nav container to go from
 stacked on each other to a row
 */
 
-@media (min-width: 448px){
+@media (min-width: 440px){
+
+  .main-nav-container {
+    flex-flow: nowrap row;
+  }
 
   .main-nav-container a {
-    width: 6em;
+    width: 8em;
     padding: 1em;
   }
   /*.main-nav li {
@@ -74,10 +112,10 @@ stacked on each other to a row
     margin: 0 auto;
   }*/
 
-  .press-section {
+/*  .press-section {
     width: 90%;
     margin-left: 5%;
-  }
+  }*/
 /*
   .press-hit-container {
     display: flex;
@@ -85,6 +123,12 @@ stacked on each other to a row
     justify-content: space-between;
     border: 2px solid #000;
   }*/
+
+
+  .contact-section > .positioner {
+    max-width: 68%;
+    margin: 0 auto;
+  }
 }
 
 /* 
@@ -109,13 +153,33 @@ and reorganize the nav bar
   }
   
 
-  .press-section {
+/*  .press-section {
     width: 84%;
     margin-left: 8%;
+  }*/
+  .contact-section > .positioner {
+    max-width: 62%;
+    margin: 0 auto;
+  }
+}
+
+
+
+@media (min-width: 600px){
+  
+  .social-icons-container {
+    width: 100%;
+  }
+    
+  .social-icons-container ul {
+    /*display: flex;*/
+    flex-flow: row nowrap;
+    width: 130%;
+    /*justify-content: center;*/
+    /*justify-content: space-between;*/
   }
 
 }
-
 
 /* 
 Break point for the menus that 
@@ -124,6 +188,20 @@ appear under services-accordion
 
 @media (min-width: 730px){
 
+/*  .contact-section > .positioner {
+    max-width: 30%;
+    margin: 0 auto;
+  }
+
+  .philosophy-section > .positioner {
+    max-width: 52%;
+    margin: 0 auto;
+  }*/
+  .press-section > .positioner {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
   button.services-accordion {
     width: 70%;
   }
@@ -132,14 +210,31 @@ appear under services-accordion
       width: 55%;
   }
 
-  .press-section {
-    width: 80%;
-    margin-left: 10%;
+  .sticky-header-nav ul li a {
+    width: 6em;
   }
 }
 
 
-@media (min-width: 850px){
+
+@media (min-width: 810px){
+
+
+
+  .press-section > .positioner {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  
+  .philosophy-section > .positioner {
+    max-width: 67%;
+    margin: 0 auto;
+  }
+
+  .contact-section > .positioner {
+    max-width: 40%;
+    margin: 0 auto;
+  }
 
   button.services-accordion {
     width: 70%;
@@ -149,22 +244,33 @@ appear under services-accordion
   div.panel {
       width: 55%;
   }
-
-  .press-section {
-    width: 70%;
-    margin-left: 15%;
-  }
 }
 
-@media (min-width: 1000px){
+
+/* ------------------------- */
+/* Break point 1000px */
+/* ------------------------- */
+
+
+@media (min-width: 1020px){
 
   .rbpr-heart-logo {
-    margin-top: 11em;
+    margin-top: 4em;
   }
 
+  .contact-section > .positioner {
+    max-width: 30%;
+    margin: 0 auto;
+  }
 
-  h2 {
-    margin-bottom: 4em;
+  .philosophy-section > .positioner {
+    max-width: 52%;
+    margin: 0 auto;
+  }
+
+  .press-section > .positioner {
+    max-width: 50%;
+    margin: 0 auto;
   }
 
   button.services-accordion {
@@ -176,9 +282,24 @@ appear under services-accordion
       width: 50%;
   }
 
-  .press-section {
-    width: 50%;
-    margin-left: 25%;
+
+}
+
+/* ------------------------- */
+/* Break point 1200px+ */
+/* ------------------------- */
+
+@media (min-width: 1200px){
+
+  .philosophy-section > .positioner {
+    max-width: 45%;
+    margin: 0 auto;
   }
+
+  .press-section > .positioner {
+    max-width: 30%;
+    margin: 0 auto;
+  }
+
 }
 

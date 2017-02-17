@@ -223,7 +223,7 @@ greater ease)
 .sticky-header-nav ul li a {
   display: flex;
   justify-content: space-around;
-  width: 5em;
+  width: 5.25em;
   padding: 1em;
   /*text-align: center;*/
   /*border: 1px solid black;*/
@@ -241,6 +241,7 @@ greater ease)
   flex-flow: wrap row;
   list-style: none;
   justify-content: center;
+  align-items: center;
   text-align: center;
   margin: 2em 0 5em 0;
 }
@@ -358,13 +359,15 @@ div.panel {
   min-height: 100vh;
   padding-top: 1em;
   padding-bottom: 4em;
+  display: flex;
+  align-items: center;
   margin-top: 0;
   margin-bottom: 0;
-  background-color: rgba(255, 178, 0, 0.8);
-  background-image: url("../img/dark-mosaic.png");
-  /*background-color: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), rgba(255, 178, 0, 0.98);*/
-  /*background-color: #FFB200;*/
-  /*border: 2px solid black;*/
+  background-color: rgba(255, 178, 0, 1.0);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.67), rgba(255, 255, 255, 0.67)), url("../img/dark-mosaic.png");
+  /*background-image: linear-gradient(rgba(255, 255, 255, 0.67), rgba(255, 255, 255, 0.87)), url("../img/basketball.png");*/
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.87)), url("../img/basketball.png");*/
+  /*background-image: url("../img/dark-mosaic.png");*/
 }
 
 
@@ -427,7 +430,6 @@ div.panel {
   background-image: url("../img/bright-squares.png");
   background-color: rgba(41, 128, 185, 0.98);
   /*background-color: #2980b9;*/
-
   /*background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("../img/congruent_pentagon.png");*/
 }
 
@@ -435,9 +437,6 @@ div.panel {
   
 }
 
-#philosophy-toggle-content {
-  
-}
 
 #philosophy-toggle-content-button {
   padding: 5px;
@@ -496,6 +495,7 @@ div.panel {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  min-width: 288px;
   margin: 0 auto;
 }
 
@@ -503,7 +503,7 @@ div.panel {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  /*justify-content: space-between;*/
+  align-items: center;
   border: 2px solid #fff;
   border-radius: 5px;
   width: 80%;
@@ -512,9 +512,8 @@ div.panel {
 
 .social-icons-container li {
   margin: .75em;
-  height: 2.5em;
-  width: 2.5em;
-  /*border: 2px solid yellow;*/
+  height: 2em;
+  width: 2em;
 }
 
 
