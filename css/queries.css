@@ -2,8 +2,20 @@
 /* Mobile screens */
 /* ------------------------- */
 
-@media (max-width: 320px){
+@media (max-width: 299px){
+  .main-nav-services {
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+  }
 
+  .main-nav-press {
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+  }
+
+  .main-nav-philosophy {
+    border-right: 2px solid transparent;
+  }
 
 }
 
@@ -26,7 +38,6 @@
   
   .contact-section > .positioner {
     max-width: 90%;
-    margin: 0 auto;
   }
 
 
@@ -36,19 +47,24 @@
 /* Break point to format press hit section */
 
 @media (min-width: 380px){
-  .positioner {
+/*  .positioner {
     max-width: 85%;
-    margin: 0 auto;
-  }
+  }*/
 
   #philosophy-toggle-content {
     text-align: justify;
   }
 
+  .press-section > .positioner {
+    max-width: 80%;
+  }
+
   .contact-section > .positioner {
     max-width: 80%;
-    margin: 0 auto;
   }
+
+
+
 /*
   .social-icons-container ul {
   display: flex;
@@ -109,7 +125,6 @@ stacked on each other to a row
 /* Redistribute press hits into a 5w x 3h grid */
 /*  .positioner {
     max-width: 90%;
-    margin: 0 auto;
   }*/
 
 /*  .press-section {
@@ -124,10 +139,13 @@ stacked on each other to a row
     border: 2px solid #000;
   }*/
 
+  .press-section > .positioner {
+    max-width: 68%;
+  }
+
 
   .contact-section > .positioner {
     max-width: 68%;
-    margin: 0 auto;
   }
 }
 
@@ -159,7 +177,6 @@ and reorganize the nav bar
   }*/
   .contact-section > .positioner {
     max-width: 62%;
-    margin: 0 auto;
   }
 }
 
@@ -167,10 +184,17 @@ and reorganize the nav bar
 
 @media (min-width: 600px){
   
-  .social-icons-container {
-    width: 100%;
+
+  .press-section > .positioner {
+    max-width: 55%;
   }
-    
+
+ /* .social-icons-container {
+    width: 100%;
+  }*/
+   
+  
+
   .social-icons-container ul {
     /*display: flex;*/
     flex-flow: row nowrap;
@@ -190,16 +214,13 @@ appear under services-accordion
 
 /*  .contact-section > .positioner {
     max-width: 30%;
-    margin: 0 auto;
   }
 
   .philosophy-section > .positioner {
     max-width: 52%;
-    margin: 0 auto;
   }*/
   .press-section > .positioner {
-    max-width: 75%;
-    margin: 0 auto;
+    max-width: 50%;
   }
 
   button.services-accordion {
@@ -207,7 +228,7 @@ appear under services-accordion
   }
 
   div.panel {
-      width: 55%;
+    width: 55%;
   }
 
   .sticky-header-nav ul li a {
@@ -222,18 +243,15 @@ appear under services-accordion
 
 
   .press-section > .positioner {
-    max-width: 60%;
-    margin: 0 auto;
+    max-width: 40%;
   }
   
   .philosophy-section > .positioner {
     max-width: 67%;
-    margin: 0 auto;
   }
 
   .contact-section > .positioner {
     max-width: 40%;
-    margin: 0 auto;
   }
 
   button.services-accordion {
@@ -242,7 +260,7 @@ appear under services-accordion
 
 
   div.panel {
-      width: 55%;
+    width: 55%;
   }
 }
 
@@ -260,17 +278,14 @@ appear under services-accordion
 
   .contact-section > .positioner {
     max-width: 30%;
-    margin: 0 auto;
   }
 
   .philosophy-section > .positioner {
     max-width: 52%;
-    margin: 0 auto;
   }
 
   .press-section > .positioner {
-    max-width: 50%;
-    margin: 0 auto;
+    max-width: 30%;
   }
 
   button.services-accordion {
@@ -291,14 +306,12 @@ appear under services-accordion
 
 @media (min-width: 1200px){
 
-  .philosophy-section > .positioner {
+ /* .philosophy-section > .positioner {
     max-width: 45%;
-    margin: 0 auto;
-  }
+  }*/
 
   .press-section > .positioner {
     max-width: 30%;
-    margin: 0 auto;
   }
 
 }

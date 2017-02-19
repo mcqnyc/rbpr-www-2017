@@ -382,7 +382,9 @@ div.panel {
 .press-hit-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
+  /*align-items: stretch;*/
+  min-width: 308px;
   /*border: 2px solid #000;*/
 }
 
@@ -416,7 +418,7 @@ div.panel {
 
 
 /* ------------------------- */
-/* philosophy / PHILOSOPHY */
+/* APPROACH / PHILOSOPHY */
 /* ------------------------- */
 
 .philosophy-section {
