@@ -2,8 +2,20 @@
 /* Mobile screens */
 /* ------------------------- */
 
-@media (max-width: 320px){
+@media (max-width: 299px){
+  .main-nav-services {
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+  }
 
+  .main-nav-press {
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+  }
+
+  .main-nav-philosophy {
+    border-right: 2px solid transparent;
+  }
 
 }
 
@@ -26,47 +38,41 @@
   
   .contact-section > .positioner {
     max-width: 90%;
-    margin: 0 auto;
   }
 
 
 }
 
 
+
+/* ------------------------- */
+/* Break point 380px */
+/* ------------------------- */
+
 /* Break point to format press hit section */
 
 @media (min-width: 380px){
-  .positioner {
-    max-width: 85%;
-    margin: 0 auto;
-  }
 
   #philosophy-toggle-content {
     text-align: justify;
   }
 
+  .press-section > .positioner {
+    max-width: 80%;
+  }
+
   .contact-section > .positioner {
     max-width: 80%;
-    margin: 0 auto;
   }
-/*
-  .social-icons-container ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  width: 80%;
-  height: 100%;
+
 }
 
- .social-icons-container li {
-    margin: .5em;
-    height: 2em;
-    width: 2em;
-  }*/
-}
+
+
+
+/* ------------------------- */
+/* Break point 440px */
+/* ------------------------- */
 
 /* 
 Break point for the links in the 
@@ -84,10 +90,6 @@ stacked on each other to a row
     width: 8em;
     padding: 1em;
   }
-  /*.main-nav li {
-    display: inline-block;
-    margin-left: 40px;
-  }*/
 
   .main-nav-services {
     /*padding: 1em;*/
@@ -106,30 +108,17 @@ stacked on each other to a row
     border-right: 2px solid #444;
   }
 
-/* Redistribute press hits into a 5w x 3h grid */
-/*  .positioner {
-    max-width: 90%;
-    margin: 0 auto;
-  }*/
-
-/*  .press-section {
-    width: 90%;
-    margin-left: 5%;
-  }*/
-/*
-  .press-hit-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    border: 2px solid #000;
-  }*/
-
-
+  .press-section > .positioner,
   .contact-section > .positioner {
     max-width: 68%;
-    margin: 0 auto;
   }
-}
+
+
+
+
+/* ------------------------- */
+/* Break point 500px */
+/* ------------------------- */
 
 /* 
 Break point for the RBPR logo
@@ -152,89 +141,128 @@ and reorganize the nav bar
     justify-content: space-between;
   }
   
-
-/*  .press-section {
-    width: 84%;
-    margin-left: 8%;
-  }*/
   .contact-section > .positioner {
     max-width: 62%;
-    margin: 0 auto;
   }
 }
 
 
+
+/* ------------------------- */
+/* Break point 540px */
+/* ------------------------- */
+
+@media (min-width: 540px){
+  .press-section > .positioner {
+    max-width: 61%;
+  }
+}
+
+
+
+/* ------------------------- */
+/* Break point 600px */
+/* ------------------------- */
 
 @media (min-width: 600px){
   
-  .social-icons-container {
-    width: 100%;
+
+  .press-section > .positioner {
+    max-width: 55%;
   }
-    
+
+
   .social-icons-container ul {
-    /*display: flex;*/
     flex-flow: row nowrap;
     width: 130%;
-    /*justify-content: center;*/
-    /*justify-content: space-between;*/
   }
 
 }
 
-/* 
-Break point for the menus that 
-appear under services-accordion
-*/
+
+
+/* ------------------------- */
+/* Break point 650px */
+/* ------------------------- */
+
+
+@media (min-width: 650px){
+  
+
+  .press-section > .positioner {
+    max-width: 52%;
+  }
+
+}
+
+
+
+/* ------------------------- */
+/* Break point 700px */
+/* ------------------------- */
+
+
+@media (min-width: 700px){
+  .press-section > .positioner {
+    max-width: 49%;
+  }
+}
+
+
+
+/* ------------------------- */
+/* Break point 730px */
+/* ------------------------- */
+
 
 @media (min-width: 730px){
-
-/*  .contact-section > .positioner {
-    max-width: 30%;
-    margin: 0 auto;
-  }
-
-  .philosophy-section > .positioner {
-    max-width: 52%;
-    margin: 0 auto;
-  }*/
-  .press-section > .positioner {
-    max-width: 75%;
-    margin: 0 auto;
-  }
-
-  button.services-accordion {
-    width: 70%;
-  }
-
-  div.panel {
-      width: 55%;
-  }
 
   .sticky-header-nav ul li a {
     width: 6em;
   }
+
+  button.services-accordion {
+    width: 70%;
+  }
+
+  div.panel {
+    width: 55%;
+  }
 }
 
 
 
+/* ------------------------- */
+/* Break point 750px */
+/* ------------------------- */
+
+
+
+@media (min-width: 750px){
+  .press-section > .positioner {
+    max-width: 45%;
+  }
+}
+
+
+
+
+/* ------------------------- */
+/* Break point 810px */
+/* ------------------------- */
+
+
 @media (min-width: 810px){
 
-
-
-  .press-section > .positioner {
-    max-width: 60%;
-    margin: 0 auto;
+  .press-section > .positioner,
+  .contact-section > .positioner {
+    max-width: 40%;
   }
   
   .philosophy-section > .positioner {
     max-width: 67%;
-    margin: 0 auto;
   }
 
-  .contact-section > .positioner {
-    max-width: 40%;
-    margin: 0 auto;
-  }
 
   button.services-accordion {
     width: 70%;
@@ -242,13 +270,29 @@ appear under services-accordion
 
 
   div.panel {
-      width: 55%;
+    width: 55%;
   }
 }
 
 
+
 /* ------------------------- */
-/* Break point 1000px */
+/* Break point 880px */
+/* ------------------------- */
+
+
+
+@media (min-width: 880px){
+  .press-section > .positioner {
+    max-width: 37%;
+  }
+}
+
+  
+
+
+/* ------------------------- */
+/* Break point 1020px */
 /* ------------------------- */
 
 
@@ -258,19 +302,16 @@ appear under services-accordion
     margin-top: 4em;
   }
 
+  .press-section > .positioner {
+    max-width: 33%
+  }
+
   .contact-section > .positioner {
-    max-width: 30%;
-    margin: 0 auto;
+    max-width: 34%;
   }
 
   .philosophy-section > .positioner {
     max-width: 52%;
-    margin: 0 auto;
-  }
-
-  .press-section > .positioner {
-    max-width: 50%;
-    margin: 0 auto;
   }
 
   button.services-accordion {
@@ -291,14 +332,12 @@ appear under services-accordion
 
 @media (min-width: 1200px){
 
-  .philosophy-section > .positioner {
+ /* .philosophy-section > .positioner {
     max-width: 45%;
-    margin: 0 auto;
-  }
+  }*/
 
   .press-section > .positioner {
     max-width: 30%;
-    margin: 0 auto;
   }
 
 }
