@@ -44,6 +44,11 @@
 }
 
 
+
+/* ------------------------- */
+/* Break point 380px */
+/* ------------------------- */
+
 /* Break point to format press hit section */
 
 @media (min-width: 380px){
@@ -61,6 +66,13 @@
   }
 
 }
+
+
+
+
+/* ------------------------- */
+/* Break point 440px */
+/* ------------------------- */
 
 /* 
 Break point for the links in the 
@@ -102,6 +114,12 @@ stacked on each other to a row
   }
 
 
+
+
+/* ------------------------- */
+/* Break point 500px */
+/* ------------------------- */
+
 /* 
 Break point for the RBPR logo
 link in the top left to appear
@@ -130,6 +148,22 @@ and reorganize the nav bar
 
 
 
+/* ------------------------- */
+/* Break point 540px */
+/* ------------------------- */
+
+@media (min-width: 540px){
+  .press-section > .positioner {
+    max-width: 61%;
+  }
+}
+
+
+
+/* ------------------------- */
+/* Break point 600px */
+/* ------------------------- */
+
 @media (min-width: 600px){
   
 
@@ -145,15 +179,46 @@ and reorganize the nav bar
 
 }
 
-/* 
-Break point for the menus that 
-appear under services-accordion
-*/
+
+
+/* ------------------------- */
+/* Break point 650px */
+/* ------------------------- */
+
+
+@media (min-width: 650px){
+  
+
+  .press-section > .positioner {
+    max-width: 52%;
+  }
+
+}
+
+
+
+/* ------------------------- */
+/* Break point 700px */
+/* ------------------------- */
+
+
+@media (min-width: 700px){
+  .press-section > .positioner {
+    max-width: 49%;
+  }
+}
+
+
+
+/* ------------------------- */
+/* Break point 730px */
+/* ------------------------- */
+
 
 @media (min-width: 730px){
 
-  .press-section > .positioner {
-    max-width: 50%;
+  .sticky-header-nav ul li a {
+    width: 6em;
   }
 
   button.services-accordion {
@@ -163,17 +228,31 @@ appear under services-accordion
   div.panel {
     width: 55%;
   }
+}
 
-  .sticky-header-nav ul li a {
-    width: 6em;
+
+
+/* ------------------------- */
+/* Break point 750px */
+/* ------------------------- */
+
+
+
+@media (min-width: 750px){
+  .press-section > .positioner {
+    max-width: 45%;
   }
 }
 
 
 
+
+/* ------------------------- */
+/* Break point 810px */
+/* ------------------------- */
+
+
 @media (min-width: 810px){
-
-
 
   .press-section > .positioner,
   .contact-section > .positioner {
@@ -196,8 +275,24 @@ appear under services-accordion
 }
 
 
+
 /* ------------------------- */
-/* Break point 1000px */
+/* Break point 880px */
+/* ------------------------- */
+
+
+
+@media (min-width: 880px){
+  .press-section > .positioner {
+    max-width: 37%;
+  }
+}
+
+  
+
+
+/* ------------------------- */
+/* Break point 1020px */
 /* ------------------------- */
 
 
@@ -207,9 +302,12 @@ appear under services-accordion
     margin-top: 4em;
   }
 
-  .press-section > .positioner,
+  .press-section > .positioner {
+    max-width: 33%
+  }
+
   .contact-section > .positioner {
-    max-width: 30%;
+    max-width: 34%;
   }
 
   .philosophy-section > .positioner {
