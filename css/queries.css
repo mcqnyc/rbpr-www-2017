@@ -49,6 +49,7 @@
   a:hover,
   a:active {
     background-color: #fbe5e2;
+    -webkit-transition: background-color .2s;
     transition: background-color .2s;
   }
 }
@@ -93,7 +94,8 @@ stacked on each other to a row
 @media (min-width: 440px){
 
   .main-nav-container {
-    flex-flow: nowrap row;
+    -ms-flex-flow: nowrap row;
+        flex-flow: nowrap row;
   }
 
   .main-nav-container a {
@@ -148,7 +150,9 @@ and reorganize the nav bar
   }
 
   .sticky-header-nav {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   
   .contact-section > .positioner {
@@ -183,7 +187,8 @@ and reorganize the nav bar
 
 
   .social-icons-container ul {
-    flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
     width: 130%;
   }
 
@@ -352,3 +357,4 @@ and reorganize the nav bar
 
 }
 
+}
